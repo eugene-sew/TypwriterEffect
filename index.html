@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Typewriter effect</title>
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <h1 class="name">Hello, I am Eugene, a developer</h1>
+    <div class="intro">
+      <h1>I make and design</h1>
+      <h1 class="typing"></h1>
+    </div>
+
+    <div class="social-bar">
+      <ul>
+        <li><i class="fab fa-facebook"></i></li>
+        <li><i class="fab fa-instagram"></i></li>
+        <li><i class="fab fa-twitter"></i></li>
+        <li><i class="fab fa-linkedin"></i></li>
+      </ul>
+    </div>
+
+    <div class="portfolio">
+      <a href="#">View my portfolio &nbsp; <i class="fa fa-globe spin"></i></a>
+    </div>
+
+    <script src="./js/all.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/fontawesome.js"></script>
+    <script src="./js/fontawesome.min.js"></script>
+    <script>
+      const texts = ["Websites", "Mobile Apps", "Illustrations"];
+      let count = 0;
+      let index = 0;
+      let currentText = "";
+      let letter = "";
+
+      (function type() {
+        if (count === texts.length) {
+          count = 0;
+        }
+
+        currentText = texts[count];
+        letter = currentText.slice(0, ++index);
+
+        document.querySelector(".typing").textContent = letter;
+        if (letter.length === currentText.length) {
+          count++;
+          index = 0;
+        }
+        setTimeout(type, 400);
+      })();
+    </script>
+  </body>
+</html>

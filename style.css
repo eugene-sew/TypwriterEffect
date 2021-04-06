@@ -1,0 +1,116 @@
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background: url(./Images/img1.jpg);
+  background-size: cover;
+}
+
+.name {
+  color: white;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.intro {
+  display: flex;
+  color: white;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  height: 100vh;
+}
+
+.typing {
+  position: relative;
+  margin-left: 10px;
+}
+
+.typing::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  width: 10px;
+  height: 07%;
+  border-right: 10px solid white;
+  animation: blink 0.5s infinite ease;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.social-bar {
+  position: fixed;
+  right: 0px;
+  top: 35%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.social-bar > ul {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  list-style: none;
+}
+
+.social-bar > ul > li {
+  margin-bottom: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.social-bar > ul > li:nth-child(1) {
+  margin-top: 10px;
+}
+
+.social-bar > ul > li:nth-child(4) {
+  margin-bottom: 10px;
+}
+
+.social-bar > ul > li:nth-child(1):hover {
+  color: blue;
+}
+
+.social-bar > ul > li:nth-child(2):hover {
+  color: red;
+}
+
+.social-bar > ul > li:nth-child(3):hover {
+  color: rgb(91, 208, 255);
+}
+
+.social-bar > ul > li:nth-child(4):hover {
+  color: rgb(4, 87, 119);
+}
+
+.portfolio {
+  background-color: #fff;
+  display: inline;
+  padding: 10px 50px;
+  position: fixed;
+  border-radius: 0px 40px 40px 0px;
+  bottom: 20px;
+  left: -30px;
+}
+
+.portfolio > a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: rgb(92, 91, 91);
+}
